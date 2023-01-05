@@ -14,14 +14,19 @@ export const Form = () => {
     const data = database[0];
     const [isUserSignedIn, setUserSignedIn] = useState(false);
     const handleSigIn = async (e:FormEvent) => {
-        if(user === data.user  && password === data.password){
-         setUserSignedIn(true);
-            navigate('/home')
+        if(user !== data.user  && password !== data.password){
+            alert('Verifique o seu usúario ou senha!')
+            e.preventDefault();
+            navigate('/');
+        } else{
+            setUserSignedIn(true);
+            navigate('/home');
         }
+
     }
 
     return (
-        <form onSubmit={handleSigIn} action="" className="flex flex-col gap-4 items-stretch w-full max-w-sm mt-10" >
+        <form onSubmit={handleSigIn} action="GET" className="flex flex-col gap-4 items-stretch w-full max-w-sm mt-10" >
             <label htmlFor="user" className="pb-5">
                 <p className="text-sm font-semibold">Úsuario</p>
 

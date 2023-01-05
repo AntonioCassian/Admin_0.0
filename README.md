@@ -8,3 +8,5 @@ Para instalar as depências do projeto, ou seja, a página node_modules;
 ## `npm start`
 
 Para rodar a página na porta 3000 (http://localhost:3000);
+
+...................................................
