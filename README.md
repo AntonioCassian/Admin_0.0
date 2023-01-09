@@ -10,3 +10,9 @@ Para instalar as depências do projeto, ou seja, a página node_modules;
 Para rodar a página na porta 3000 (http://localhost:3000);
 
 ...................................................
+
+## O que falta:
+1. Criação das outras páginas.
+2. Privatização e criaçãs da pagina das Rotas.
+3. Implementar os Hooks e do useState.
+4. Criação de um CRUD.

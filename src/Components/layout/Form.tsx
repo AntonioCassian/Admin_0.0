@@ -2,11 +2,11 @@ import { FormEvent, useState } from "react"
 import { useNavigate } from "react-router-dom";
 
 export const Form = () => {
-    const [user, setUser] = useState('');
+    const [name, setName] = useState('');
     const [password, setPassword] = useState('');
     const database = [
         {
-            user: "antonio",
+            name: "antonio",
             password: "123456"
         }
     ]
@@ -14,7 +14,7 @@ export const Form = () => {
     const data = database[0];
     const [isUserSignedIn, setUserSignedIn] = useState(false);
     const handleSigIn = async (e:FormEvent) => {
-        if(user !== data.user  && password !== data.password){
+        if(name !== data.name  && password !== data.password){
             alert('Verifique o seu usúario ou senha!')
             e.preventDefault();
             navigate('/');
@@ -34,8 +34,8 @@ export const Form = () => {
                     type="text"
                     id="user"
                     className="py-4 px-3 bg-gray-900 rounded w-full text-gray-200 text-xs placeholder:text-gray-400 outline-none"
-                    onChange={e => setUser(e.target.value)}    
-                    value={user}
+                    onChange={e => setName(e.target.value)}    
+                    value={name}
                     placeholder="Digite seu úsuario" 
                 />
 

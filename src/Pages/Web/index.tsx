@@ -2,7 +2,7 @@ import React from "react";
 import { Header } from "../../Components/layout/Header";
 import { Nav } from "../../Components/layout/Nav";
 import { Logo } from "../../Logo";
-export const Home = () =>  {
+export const Web = () =>  {
     return(
         <>
         <Header />
