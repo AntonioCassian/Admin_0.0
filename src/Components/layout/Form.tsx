@@ -1,28 +1,17 @@
-import { FormEvent, useState } from "react"
-import { useNavigate } from "react-router-dom";
+import { FormEvent, useState, useContext } from "react"
+import { AuthContext } from "../../contexts/auth";
 
 export const Form = () => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { authenticated, login } = useContext(AuthContext);
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
-    const database = [
-        {
-            name: "antonio",
-            password: "123456"
-        }
-    ]
-    const navigate = useNavigate();
-    const data = database[0];
-    const [isUserSignedIn, setUserSignedIn] = useState(false);
-    const handleSigIn = async (e:FormEvent) => {
-        if(name !== data.name  && password !== data.password){
-            alert('Verifique o seu usúario ou senha!')
-            e.preventDefault();
-            navigate('/');
-        } else{
-            setUserSignedIn(true);
-            navigate('/home');
-        }
 
+    const handleSigIn = async (e:FormEvent) => {
+        e.preventDefault();
+        console.log("submit", {name, password});
+        
+        login(name, password);
     }
 
     return (
