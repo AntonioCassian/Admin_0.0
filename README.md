@@ -16,3 +16,7 @@ Para rodar a página na porta 3000 (http://localhost:3000);
 2. Privatização e criaçãs da pagina das Rotas.
 3. Implementar os Hooks e do useState.
 4. Criação de um CRUD.
+
+
+
+O tawilind parou de funcionar
