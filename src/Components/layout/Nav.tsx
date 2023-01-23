@@ -1,15 +1,19 @@
 
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export function Nav() {
+    useEffect(() => {
+        
+
+    }, [])
     let list = [
-        {nameNav:'Lista de Produtos', path:'/lista-de-produtos'},
+        {nameNav:'Lista de Produtos', path:'/lista-produtos'},
         {nameNav:'Vendas', path:'/vendas'},
         {nameNav:'Clientes', path:'/clientes'},
         {nameNav:'Cupons', path:'/cupons'},
         {nameNav:'Chat', path:'/chat'}
     ]
-    
 
     return(
         <ul className="flex flex-col gap-5 px-3 w-52 pt-6 ">

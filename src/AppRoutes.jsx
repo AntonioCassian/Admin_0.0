@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 
 import {
     BrowserRouter,
@@ -11,7 +11,10 @@ import {
 
 import { AuthProvider,AuthContext } from "./contexts/auth";
 import { Login } from './Pages/Login';
-import { Web } from './Pages/Web';
+import { Home } from './Pages/Home';
+import { Produtos } from './Pages/ProDutos';
+import { Vendas } from './Pages/Vendas';
+import { NotFoud } from './Pages/NotFoun';
 
 const AppRoutes = () => {
    const Private = ({children}) => {
@@ -30,10 +33,11 @@ const AppRoutes = () => {
             <AuthProvider>
                 <Routes>
                     <Route exact path="/login" element={<Login /> } />
-                    <Route path="/" element=
-                    {<Private> 
-                        <Web /> 
-                    </Private>} />
+                    <Route path="/" element={<Private> <Home /> </Private>} />
+                    <Route path="/lista-produtos" element={<Private> <Produtos /> </Private>} />
+                    <Route path="/vendas" element={ <Vendas />} />
+                    <Route path="*" element={ <NotFoud />} />
+
                 </Routes>
             </AuthProvider>
         </BrowserRouter>

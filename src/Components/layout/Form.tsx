@@ -1,4 +1,4 @@
-import { FormEvent, useState, useContext } from "react"
+import React, { FormEvent, useState, useContext } from "react"
 import { AuthContext } from "../../contexts/auth";
 
 export const Form = () => {

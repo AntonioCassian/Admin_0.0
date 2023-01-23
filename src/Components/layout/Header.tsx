@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { Logo } from "../../Logo";
 import { Link } from 'react-router-dom';
 import { Bell, UserCircle } from 'phosphor-react'
@@ -11,10 +11,11 @@ export function Header() {
     const handleLogout = () => {
         logout();
     }
+
     return(
         <header>
             <div className="flex justify-between">
-                <Link to='/home'>
+                <Link to='#'>
                     <Logo />
                 </Link>
                 <div>
