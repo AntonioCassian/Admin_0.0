@@ -2,6 +2,6 @@ import React from 'react';
 
 export function NotFoud(){
     return(
-        <h2>AAAAAAAAAAAAAAAAAAAAAAAAAAAAA</h2>
+        <h2>Pagina Não Encontrada!</h2>
     )
 }

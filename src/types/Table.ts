@@ -1,8 +1,11 @@
 export type Table = {
     id: number;
-    Quantidade: string;
-    QMinima: string;
-    Valor: string;
+    Quantidade: number;
+    QMinima: number;
+    Valor: number;
     Marca: string;
     Ação: string;
+    nome: string;
+    descricao: string;
+    img: string;
 }

@@ -4,23 +4,23 @@ import { Nav } from "../../Components/layout/Nav";
 import { Link } from "react-router-dom";
 import { Table } from "../../types/Table";
 import { Pesquisa } from "../../Components/layout/Pesquisa";
+import { TableServices } from "../../service/api/Crud/TableService";
+import { ApiException } from "../../service/api/ErrorException";
+import { Button } from "../../Components/Button";
 
 export function Produtos (){
     const [tab, setTab] = useState<Table[]>([]);
 
     useEffect(() => {
-        loadTable();
+        TableServices.getAll()
+        .then((result)=>{
+            if(result instanceof ApiException){
+                alert(result.message);
+            } else {
+                setTab(result);
+            }
+        });
     }, []);
-
-    const loadTable = async () => {
-        try{
-            let response = await fetch("http://localhost:3004/posts");
-            let json = await response.json();
-            setTab(json);
-        } catch(e) {
-           alert("Tente Novamente mais tarde! Sua Base de Dados não está carreagando!");
-        }
-    }
 
 
     return(
@@ -31,7 +31,7 @@ export function Produtos (){
             <div className="text-center flex-1 px-16">
                 <h4 className="text-md">Lista de Produtos</h4>
                 <Pesquisa />
-
+                <Button />
                 <div className="row">
                 <table className="w-full text-center">
                     <thead className="text-md bg-gray-800 text-gray-200">
@@ -50,7 +50,7 @@ export function Produtos (){
                             <td className="border-b-blackpy-4 px-6">{item.QMinima}</td>
                             <td className="border-b-blackpy-4 px-6">{item.Valor}</td>
                             <td className="border-b-blackpy-4 px-6">{item.Marca}</td>
-                            <td className="border-b-blackpy-4 px-6"><Link to='#'>{item.Ação}</Link></td>
+                            <td className="border-b-blackpy-4 px-6"><Link to={`/produto/${item.id}`}>{item.Ação}</Link></td>
                         </tr>
                         ))}        
                     
