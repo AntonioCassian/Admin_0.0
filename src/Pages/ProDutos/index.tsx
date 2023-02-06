@@ -1,28 +1,54 @@
-import React, { useEffect, useState } from "react";
+import React, { FormEvent, useEffect, useState } from "react";
 import { Header } from "../../Components/layout/Header";
 import { Nav } from "../../Components/layout/Nav";
 import { Link } from "react-router-dom";
 import { Table } from "../../types/Table";
 import { Pesquisa } from "../../Components/layout/Pesquisa";
-import { TableServices } from "../../service/api/Crud/TableService";
-import { ApiException } from "../../service/api/ErrorException";
 import { Button } from "../../Components/Button";
+import { api } from "../../service/api";
 
 export function Produtos (){
     const [tab, setTab] = useState<Table[]>([]);
 
     useEffect(() => {
-        TableServices.getAll()
-        .then((result)=>{
-            if(result instanceof ApiException){
-                alert(result.message);
-            } else {
-                setTab(result);
-            }
-        });
+        loadPost();
     }, []);
+    const loadPost = async () => {
+        let json = await api.getAllPosts();
+        setTab(json);
+    }
+    /**
+     * const handleDados = async(e: FormEvent) => {
+        e.preventDefault();
+        if(quantidade && QMinima && valor && marca) {
+            let response = await fetch('http://localhost:3333/produtos ', {
+                method: 'POST',
+                body: JSON.stringify({
+                    quantidade,
+                    QMinima, 
+                    valor,
+                    marca,
+                    acao,
+                    descricao,
+                    image,
+                }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            let json = await response.json();
+            console.log(json);
 
-
+            if(json.id){
+                alert('Post adicionado com sucesso');
+            }else{
+                alert('algo deu errado')
+            }
+        } else{
+            alert('Preencha os dados')
+        }
+    }
+     */
     return(
         <>
         <Header/>
@@ -33,6 +59,7 @@ export function Produtos (){
                 <Pesquisa />
                 <Button />
                 <div className="row">
+                
                 <table className="w-full text-center">
                     <thead className="text-md bg-gray-800 text-gray-200">
                         <tr>
@@ -45,15 +72,15 @@ export function Produtos (){
                     </thead>
                     <tbody>
                         {tab.map((item, index) => (
-                        <tr key={index} className="bg-gray-400 border-black border-b">
+                        <tr key={item.id} className="bg-gray-400 border-black border-b">
                             <td className="border-b-blackpy-4 px-6">{item.Quantidade}</td>
                             <td className="border-b-blackpy-4 px-6">{item.QMinima}</td>
                             <td className="border-b-blackpy-4 px-6">{item.Valor}</td>
                             <td className="border-b-blackpy-4 px-6">{item.Marca}</td>
-                            <td className="border-b-blackpy-4 px-6"><Link to={`/produto/${item.id}`}>{item.Ação}</Link></td>
+                            <td className="border-b-blackpy-4 px-6"><Link to={"/Item-Produto/" + item.id}>{item.Ação}</Link></td>
                         </tr>
                         ))}        
-                    
+                        
                     </tbody>
                 </table>
                 </div>

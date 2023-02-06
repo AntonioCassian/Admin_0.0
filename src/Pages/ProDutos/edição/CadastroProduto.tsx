@@ -1,33 +1,28 @@
-import React,{ useState } from "react";
-import { LabelInput } from "../../../Components/LabelInput";
+import React,{ FormEvent, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { FormAdd } from "../../../Components/layout/FormAdd";
 import { Header } from "../../../Components/layout/Header";
+import { api } from "../../../service/api";
 
 export const CadastroProduto = () => {
-    const [quantidade, setQuantidade] = useState('');
-    const [QMinima, setQMinima] = useState('');
-    const [valor, setValor] = useState('');
-    const [marca, setMarca] = useState('');
-    const [name, setName] = useState('');
-    const [descricao, setDescricao] = useState('');
-    const [image, setImg] = useState('');
-    console.log(quantidade);
+    const navigate = useNavigate();
+
+    
+    const handleAdd = async (Quantidade: string, QMinima: string, Valor: string, Marca: string, Ação: string, Descricao: string, Image: string) => {
+            let json = await api.AddNew(Quantidade, QMinima, Valor, Marca, Ação, Descricao, Image);
+                if(json.id){
+                    alert('Post adicionado com sucesso');
+                } else {
+                    alert('algo deu errado');
+                    navigate('/cadastro-Produto');
+                } 
+    }   
+
+    
     return(
         <>
             <Header />
-        <form action="">
-            <LabelInput 
-                label="Quantidade"
-                type="number"
-                value={quantidade}
-                onChange={newValue => setQuantidade(newValue)}
-            />
-            <LabelInput 
-            type="number" 
-            onChange={newValue => setQuantidade(newValue)}
-            value= {quantidade}
-            />
-            
-        </form>
+            <FormAdd onAdd={handleAdd} />
         </>
     )
 }

@@ -15,7 +15,7 @@ import { Home } from './Pages/Home';
 import { Produtos } from './Pages/ProDutos';
 import { ItemProduto } from './Pages/ProDutos/edição/ItemProduto';
 import { CadastroProduto } from './Pages/ProDutos/edição/CadastroProduto';
-import { Vendas } from './Pages/Vendas';
+//import { Vendas } from './Pages/Vendas';
 import { NotFoud } from './Pages/NotFound';
 
 const AppRoutes = () => {
@@ -38,9 +38,8 @@ const AppRoutes = () => {
                     <Route exact path="/login" element={<Login /> } />
                     <Route path="/" element={<Private> <Home /> </Private>} />
                     <Route path="/lista-produtos" element={<Private> <Produtos /> </Private>} />
-                    <Route path="/produtos/${id}" element={< ItemProduto />} />
-                    <Route path="/cadastroProduto" element={< CadastroProduto />} />
-                    <Route path="/vendas" element={ <Vendas />} />
+                    <Route path='/cadastro-Produto' element={<CadastroProduto />}/>
+                    <Route path="/Item-Produto/:id" element={<ItemProduto />} />
                     <Route path="*" element={ <NotFoud />} />
                 </Routes>
             </AuthProvider>

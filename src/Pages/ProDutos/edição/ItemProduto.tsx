@@ -2,26 +2,40 @@ import React,{useEffect, useState} from "react";
 import { Table } from "../../../types/Table";
 
 import { Header } from "../../../Components/layout/Header";
-import { TableServices } from "../../../service/api/Crud/TableService";
-import { ApiException } from "../../../service/api/ErrorException";
+import { api } from "../../../service/api";
 
-export const ItemProduto = () => {
-    const [tab, setTab] = useState<Table[]>([]);
-
+export const ItemProduto = (id: number) => {
+    const [data, setData] = useState<Table[]>([]);
+    
     useEffect(() => {
+        const loadPost = async () => {
+            let json = await api.getAllId(id);
+            setData(json);
+        }
+        loadPost();
+    }, [id]);
 
-    }, []);
+   
     return(
         <>
             <Header/>
-
-            {tab.map((item, index)=>{
-                <div key={index}>
+                <div>
+                    <>
+                    {data.map((item) => (
+                        <div>
+                            <div>
+                                <img src={item.Image} alt="Camisa" />
+                            </div>
+                            <p>{item.Descricao}</p>
+                        </div>
+                    ))}
+                    </>
                     <div>
-                        {item.img}
+                        <button className="bg-color-red">
+                            Editar
+                        </button>
                     </div>
                 </div>
-            })}
 
         </>
     )

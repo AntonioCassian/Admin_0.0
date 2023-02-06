@@ -6,6 +6,7 @@ export type Table = {
     Marca: string;
     Ação: string;
     nome: string;
-    descricao: string;
-    img: string;
+    Descricao: string;
+    Image: string;
+    isCompleted: boolean;
 }

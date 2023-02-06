@@ -3,10 +3,6 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export function Nav() {
-    useEffect(() => {
-        
-
-    }, [])
     let list = [
         {nameNav:'Lista de Produtos', path:'/lista-produtos'},
         {nameNav:'Vendas', path:'/vendas'},
