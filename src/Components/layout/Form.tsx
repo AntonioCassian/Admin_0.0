@@ -15,30 +15,38 @@ export const Form = () => {
     }
 
     return (
-        <form onSubmit={handleSigIn} className="flex flex-col gap-4 items-stretch w-full max-w-sm mt-10" >
+        <form onSubmit={handleSigIn} className="d-flex flex-column w-auto" >
+            <div className="pb-2">
             <LabelInput
             htmlFor="user"
             label="Úsuario"
             type="text"
             id="user"
-            className="py-4 px-3 bg-gray-900 rounded w-full text-gray-200 text-xs placeholder:text-gray-400 outline-none"
+            className="py-2 px-3 rounded text-white"
+            style={{background: '#A8A29E'}}
             onChange={newValue => setName(newValue)}
             value={name}
             placeholder="Digite seu úsuario"
             />
            
+            </div>
+
+            <div className="pb-2">
+                
            <LabelInput
             htmlFor="password"
             label="Senha"
             type="password"
             id="password"
-            className="py-4 px-3 bg-gray-900 rounded w-full text-gray-200 text-xs placeholder:text-gray-400 outline-none"
+            className="py-2 px-3 rounded text-white"
+            style={{background: '#A8A29E'}}
             onChange={newValue => setPassword(newValue)}
             value={password}
             placeholder="Digite sua Senha"
             />
             
-            <button type="submit" className="py-3 px-4 text-gray-200 bg-red-600 rounded font-semibold text-sm w-full transition-colors hover:bg-red-400 focus:ring-2 ring-white">
+            </div>
+            <button type="submit" className="btn py-2 rounded mt-4" style={{background: '#C00606'}}>
                 Enviar
             </button>
         </form>

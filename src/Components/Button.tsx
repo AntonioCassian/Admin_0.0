@@ -1,11 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-export const Button = () => {
+interface Ilin {
+    to: string;
+    text: string;
+    className: string;
+}
+export const Button: React.FC<Ilin> = (props) => {
     return(
-        <button className="text-gray-200 bg-linear">
-            <Link to='/cadastro-Produto'>
-                Criar Cadastro
+        <button className={props.className}>
+            <Link to={props.to} className='text-decoration-none text-white'>
+                {props.text}
             </Link>
         </button>
     )

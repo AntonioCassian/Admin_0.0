@@ -1,8 +1,7 @@
 import React from 'react';
-
-import './index.css';
-
 import AppRoutes from './AppRoutes';
+import './styles/global.css';
+import  'bootstrap/dist/css/bootstrap.css' ;
 
 export default function App() {
   return (

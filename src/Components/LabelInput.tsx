@@ -4,8 +4,10 @@ interface IValorInput{
     htmlFor?: string;
     type: string;
     id?: string;
-    value: string;
+    name?: string;
+    value?: string;
     placeholder?: string;
+    style?: {};
     className?: string;
     onChange: (newValue: string) => void;
 }
@@ -13,15 +15,17 @@ export const LabelInput: React.FC<IValorInput> = (props) => {
 
     return(
         <>
-            <label htmlFor={props.htmlFor}  className="pb-5">
-                <p className="text-sm font-semibold">{props.label}</p>
+            <label htmlFor={props.htmlFor}  className="d-flex flex-column">
+                <span className="align-content-start my-2" style={{fontSize: 16}}>{props.label}</span>
 
                 <input 
                     type={props.type}
                     id={props.id}
-                    className="py-4 px-3 bg-gray-900 rounded w-full text-gray-200 text-xs placeholder:text-gray-400 outline-none"
                     onChange={e => props.onChange(e.target.value)}    
                     value={props.value}
+                    style={props.style}
+                    className={props.className}
+                    name= {props.name}
                     placeholder={props.placeholder}
                 />
 

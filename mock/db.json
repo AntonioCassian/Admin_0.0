@@ -2,14 +2,14 @@
   "produtos": [
     {
       "id": 1,
-      "Quantidade": "10",
-      "QMinima": "1",
-      "Valor": "30,00",
-      "Marca": "Polo",
-      "Ação": "Visualizar",
-      "nome": "Camisa Polo Division - Cinza",
-      "Descricao": "A Camisa Polo INVICTUS Division é confeccionada em tecido Piquet 100% Algodão. Ela possui modelagem Regular Fit, que oferece maior conforto e melhor caimento. Seu design é moderno com recortes estratégicos, transpirável, com boa hidrofilidade, reforço nas aberturas laterais e na gola, além de abotoamento frontal com 3 botões personalizados. Destaque para a aleta para pendurar os óculos, logo abaixo dos botões.",
-      "Image": "https://www.invictus.com.br/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/P/o/Polo-division-cinza-01.jpg"
+      "Quantidade": "20",
+      "QMinima": "2",
+      "Valor": "59.00",
+      "Marca": "Nike",
+      "nome": "Camiseta Nike Dri-FIT Academy Masculina",
+      "Descricao": "Eleve o nível do seu treino diário com a camiseta Nike Dri-FIT Academy. O tecido macio e elástico remove o suor da pele, enquanto os painéis de tela mantêm o frescor para que você se concentre em dar o seu melhor no jogo.",
+      "Image": "https://imgcentauro-a.akamaihd.net/600x600/95847031/camiseta-nike-dry-academy-21-top-masculina-img.jpg",
+      "Nome": "Camisseta da nike"
     },
     {
       "id": 2,
@@ -17,84 +17,20 @@
       "QMinima": "2",
       "Valor": "40,00",
       "Marca": "Nike",
-      "Ação": "Visualizar",
       "nome": "Camiseta Nike Dri-FIT Academy Masculina",
       "Descricao": "Eleve o nível do seu treino diário com a camiseta Nike Dri-FIT Academy. O tecido macio e elástico remove o suor da pele, enquanto os painéis de tela mantêm o frescor para que você se concentre em dar o seu melhor no jogo.",
       "Image": "https://imgcentauro-a.akamaihd.net/600x600/95847031/camiseta-nike-dry-academy-21-top-masculina-img.jpg"
     },
     {
       "id": 3,
-      "Quantidade": "30",
-      "QMinima": "3",
-      "Valor": "25,00",
-      "Marca": "Adidas",
-      "Ação": "Visualizar",
-      "nome": "Camiseta 3-Stripes - Branco adidas",
-      "Descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aspernatur nulla nemo dignissimos molestiae debitis, ut velit voluptate eveniet maiores soluta eaque, deleniti placeat dolor quis consequuntur accusantium quibusdam accusamus!",
-      "Image": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/c0b5234b4053469285dea83500d56eda_9366/Camiseta_3-Stripes_Branco_CW1203_01_laydown.jpg"
-    },
-    {
-      "id": 4,
-      "Quantidade": "50",
-      "QMinima": "4",
-      "Valor": "50,00",
-      "Marca": "Colcci",
-      "Ação": "Visualizar",
-      "nome": "Camiseta Gucci Mickey Mouse",
-      "Descricao": "Camiseta meia manga com gola redonda costurada com pesponto, deixando a peça com um ótimo visual e acabamento. Possui costura reforçada de ombro a ombro e reforço de gola dando sustentação e caimento perfeitos. Corte mais justo, perfeito para uso no dia a dia!",
-      "Image": "https://images.tcdn.com.br/img/img_prod/1085545/camiseta_gucci_mickey_mouse_5119_1_4141d97fb7838fcdd4ae810390ab62ab.jpeg"
-    },
-    {
-      "id": 5,
-      "Quantidade": "90",
-      "QMinima": "4",
-      "Valor": "25,00",
-      "Marca": "Aleatory",
-      "Ação": "Visualizar",
-      "nome": "Camiseta Básica Aleatory Masculina - Marinho",
-      "Descricao": "Apaixone-se pela Camiseta Básica Aleatory! Feita especialmente para quem curte um visual numa pegada mais street ou sportwear, a peça é lisa e conta com um pequeno aplique do logo da Aleatory. Desenvolvida em tecido 100% algodão, oferece resistência, toque macio e sedoso, durabilidade e muito conforto, tornando seu uso ainda mais gostoso. Leve estilo para completar seu guarda-roupa!",
-      "Image": "https://static.zattini.com.br/produtos/camiseta-basica-aleatory-masculina/12/E83-3351-012/E83-3351-012_zoom1.jpg?ts=1644841749&ims=544x"
-    },
-    {
-      "id": 6,
-      "Quantidade": "90",
-      "QMinima": "3",
-      "Valor": "25,00",
-      "Marca": "Aleatory",
-      "Ação": "Visualizar",
-      "nome": "Camisa Aleatory Polo Azul",
-      "Descricao": "Camisa Aleatory Polo azul, confeccionada com listras em tons contrastantes, logo da marca na altura do peito e nome nos ombros. Gola polo, modelagem reta.",
-      "Image": "https://t-static.dafiti.com.br/idlG1CXhKssWwQHMbBCIRlAH8I4=/fit-in/430x623/static.dafiti.com.br/p/aleatory-camisa-aleatory-polo-azul-1216-9239051-1-zoom.jpg"
-    },
-    {
-      "Quantidade": "32",
-      "QMinima": "21",
-      "Valor": "211",
-      "Marca": "dxfdxf",
-      "Ação": "Visualizar",
-      "Descricao": "yxddddddddddddddddd",
-      "Image": "C:\\fakepath\\images.jpg",
-      "id": 7
-    },
-    {
-      "Quantidade": "32",
-      "QMinima": "1",
-      "Valor": "66",
-      "Marca": "asssssss",
-      "Ação": "Visualizar",
-      "Descricao": " mn mn ,m ,mn mn ,mn ,m jhvljvhljbvlj",
-      "Image": "C:\\fakepath\\images.jpg",
-      "id": 8
-    },
-    {
-      "Quantidade": "45",
+      "Quantidade": "20",
       "QMinima": "2",
-      "Valor": "56.00",
-      "Marca": "polo",
-      "Ação": "Visualizar",
-      "Descricao": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "Image": "C:\\fakepath\\images.jpg",
-      "id": 9
+      "Valor": "50.00",
+      "Marca": "Nike",
+      "nome": "Camiseta Nike Dri-FIT Academy Masculina",
+      "Descricao": "Eleve o nível do seu treino diário com a camiseta Nike Dri-FIT Academy. O tecido macio e elástico remove o suor da pele, enquanto os painéis de tela mantêm o frescor para que você se concentre em dar o seu melhor no jogo.",
+      "Image": "https://imgcentauro-a.akamaihd.net/600x600/95847031/camiseta-nike-dry-academy-21-top-masculina-img.jpg",
+      "Nome": "Caamisa top"
     }
   ],
   "comments": [

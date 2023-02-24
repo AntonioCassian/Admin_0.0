@@ -15,8 +15,11 @@ import { Home } from './Pages/Home';
 import { Produtos } from './Pages/ProDutos';
 import { ItemProduto } from './Pages/ProDutos/edição/ItemProduto';
 import { CadastroProduto } from './Pages/ProDutos/edição/CadastroProduto';
+import { EditProduto } from './Pages/ProDutos/edição/EditProduto';
 //import { Vendas } from './Pages/Vendas';
 import { NotFoud } from './Pages/NotFound';
+import "./styles/global.css";
+
 
 const AppRoutes = () => {
    const Private = ({children}) => {
@@ -38,8 +41,11 @@ const AppRoutes = () => {
                     <Route exact path="/login" element={<Login /> } />
                     <Route path="/" element={<Private> <Home /> </Private>} />
                     <Route path="/lista-produtos" element={<Private> <Produtos /> </Private>} />
+
                     <Route path='/cadastro-Produto' element={<CadastroProduto />}/>
-                    <Route path="/Item-Produto/:id" element={<ItemProduto />} />
+                    <Route path='/item-Produto/:id' element={<ItemProduto />}/>
+                    <Route path="/edit-Produto/:id" element={<EditProduto />} />
+
                     <Route path="*" element={ <NotFoud />} />
                 </Routes>
             </AuthProvider>

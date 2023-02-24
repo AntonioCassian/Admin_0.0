@@ -12,10 +12,10 @@ export function Nav() {
     ]
 
     return(
-        <ul className="flex flex-col gap-5 px-3 w-52 pt-6 ">
+        <ul className="list-group list-group-flush position-fixed">
            {list.map((item, index)=>(
-             <li  className="w-full" key={index}>
-             <Link to={item.path} className="hover:underline underline-offset-2">
+             <li  className="list-group-item" key={index}>
+             <Link to={item.path} className="text-black text-decoration-none">
                 {item.nameNav}
              </Link>
             </li>
