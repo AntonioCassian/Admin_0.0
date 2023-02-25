@@ -11,7 +11,15 @@ export interface ListProdutos {
     Image: string;
     isCompleted?: boolean;
 }
-
+export interface IListVendas {
+    id: number;
+    comprador: string;
+    qprod: number;
+    total: number;
+    marca: string;
+    tamanho: string;
+    situacao: string;
+}
 export type IProduto = {
     id: number;
     Valor: number;

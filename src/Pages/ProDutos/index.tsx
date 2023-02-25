@@ -1,4 +1,4 @@
-import React, { FormEvent, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Header } from "../../Components/layout/Header";
 import { Nav } from "../../Components/layout/Nav";
 import { Link, redirect, useNavigate } from "react-router-dom";
@@ -68,12 +68,12 @@ export function Produtos (){
                     <tbody>
                         {tab.map((data, index) => (
                         <tr key={data.id} className="bg-gray-400 border-black border-b">
-                            <td className="border-b-blackpy-4 px-6">{data.Quantidade}</td>
-                            <td className="border-b-blackpy-4 px-6">{data.QMinima}</td>
-                            <td className="border-b-blackpy-4 px-6">{data.Valor}</td>
-                            <td className="border-b-blackpy-4 px-6">{data.Marca}</td>
-                            <td className="border-b-blackpy-4 px-6"><button onClick={() => view(data.id)}>Visualizar</button></td>
-                            <td className="border-b-blackpy-4 px-6">
+                            <td className="border-b-black py-4 px-6">{data.Quantidade}</td>
+                            <td className="border-b-black py-4 px-6">{data.QMinima}</td>
+                            <td className="border-b-black py-4 px-6">{data.Valor}</td>
+                            <td className="border-b-black py-4 px-6">{data.Marca}</td>
+                            <td className="border-b-black py-4 px-6"><button onClick={() => view(data.id)}>Visualizar</button></td>
+                            <td className="border-b-black py-4 px-6">
                                 <button onClick={() => edit(data.id)}>Editar</button>
                             </td>
                             <td className="border-b-blackpy-4 px-6">

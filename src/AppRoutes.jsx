@@ -16,7 +16,8 @@ import { Produtos } from './Pages/ProDutos';
 import { ItemProduto } from './Pages/ProDutos/edição/ItemProduto';
 import { CadastroProduto } from './Pages/ProDutos/edição/CadastroProduto';
 import { EditProduto } from './Pages/ProDutos/edição/EditProduto';
-//import { Vendas } from './Pages/Vendas';
+import { Vendas } from './Pages/Vendas';
+import { ItemVenda } from './Pages/Vendas/edição/ItemVenda';
 import { NotFoud } from './Pages/NotFound';
 import "./styles/global.css";
 
@@ -46,6 +47,8 @@ const AppRoutes = () => {
                     <Route path='/item-Produto/:id' element={<ItemProduto />}/>
                     <Route path="/edit-Produto/:id" element={<EditProduto />} />
 
+                    <Route path='/vendas' element={<Vendas/>}/>
+                    <Route path='/vendaItem' element={<ItemVenda/>} />
                     <Route path="*" element={ <NotFoud />} />
                 </Routes>
             </AuthProvider>

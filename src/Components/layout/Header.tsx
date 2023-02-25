@@ -21,8 +21,8 @@ export function Header() {
                 <Link to='#'>
                     <Logo />
                 </Link>
-                <div>
-                <div className="d-flex">
+                
+                <div className="d-flex justify-content-end">
                     <UserCircle  className="text-gray mt-3 nav-link" style={{width: 45, height: 45}}/>
                     <DropdownButton className='mt-3 text-black'  id="dropdown" title="">
       <Dropdown.Item href="#/action-1" onClick={handleLogout}>Sair</Dropdown.Item>
@@ -32,7 +32,7 @@ export function Header() {
                         
                     </div>
                 </div>
-                </div>
+              
             </div>
         </header>
     )

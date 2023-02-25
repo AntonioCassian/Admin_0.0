@@ -33,6 +33,24 @@
       "Nome": "Caamisa top"
     }
   ],
+  "vendas": [
+    {
+      "comprador": "Antonio Martins Cassiano",
+      "qprod": 2,
+      "total": 55,
+      "tamanho": "M",
+      "situacao": "Pendente",
+      "marca": "Nike"
+    },
+    {
+      "comprador": "Antonio Martins Cassiano",
+      "qprod": 1,
+      "total": 55,
+      "tamanho": "P",
+      "situacao": "Aprovada",
+      "marca": "Nike"
+    }
+  ],
   "comments": [
     {
       "id": 1,
