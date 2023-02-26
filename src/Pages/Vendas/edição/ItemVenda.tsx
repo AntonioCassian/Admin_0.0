@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { useParams } from 'react-router-dom';
 import { Header } from '../../../Components/layout/Header';
-
+import { api } from '../../../service/api';
 export function ItemVenda() {
+    const [data, setData ] = useState({
+        image: '', descricao: '', nome: ''
+    })
+    const {id} = useParams();
+    console.log(id);
 
+    useEffect(() => {
+        api.get(`/vendas/${id}`)
+        .then(response => {
+            setData(response.data);
+        })
+        .catch(() => {
+            alert("Erro ao Consultar o BD");
+        });
+    }, [id]);
     return(
         <>
         <Header />
@@ -11,19 +26,19 @@ export function ItemVenda() {
             <Row className='mt-4'>
                 <Col xs={6}>
                     <div className='w-100'>
-                        <img className='w-100' src={"https://img.freepik.com/vetores-premium/maquete-de-t-shirt-masculina-de-vetor-amarelo_292608-200.jpg"} alt="" />
+                        <img className='w-100' src={data.image} alt="" />
                     </div>
                 </Col>
                 <Col xs={6}>
                     <div className='d-flex flex-column justify-content-around text-center h-75'>
-                        <h5>Camisa Nike</h5>
+                        <h5>{data.nome}</h5>
                     
                             <div>
                                 Data da venda: 32/12/2023
                             </div>
                             
                             <div>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur porro voluptate recusandae atque dolor officia voluptatibus natus, eius odit similique non pariatur veniam mollitia assumenda molestiae ad temporibus ab itaque.</p>
+                                <p>{data.descricao}</p>
                             </div>
 
 

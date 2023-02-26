@@ -17,38 +17,45 @@
       "QMinima": "2",
       "Valor": "40,00",
       "Marca": "Nike",
-      "nome": "Camiseta Nike Dri-FIT Academy Masculina",
+      "Nome": "Camiseta Nike Dri-FIT Academy Masculina",
       "Descricao": "Eleve o nível do seu treino diário com a camiseta Nike Dri-FIT Academy. O tecido macio e elástico remove o suor da pele, enquanto os painéis de tela mantêm o frescor para que você se concentre em dar o seu melhor no jogo.",
       "Image": "https://imgcentauro-a.akamaihd.net/600x600/95847031/camiseta-nike-dry-academy-21-top-masculina-img.jpg"
     },
     {
-      "id": 3,
+      "id": 4,
       "Quantidade": "20",
       "QMinima": "2",
-      "Valor": "50.00",
+      "Valor": "40,00",
       "Marca": "Nike",
-      "nome": "Camiseta Nike Dri-FIT Academy Masculina",
+      "Nome": "Camiseta Nike Dri-FIT Academy Masculina",
       "Descricao": "Eleve o nível do seu treino diário com a camiseta Nike Dri-FIT Academy. O tecido macio e elástico remove o suor da pele, enquanto os painéis de tela mantêm o frescor para que você se concentre em dar o seu melhor no jogo.",
-      "Image": "https://imgcentauro-a.akamaihd.net/600x600/95847031/camiseta-nike-dry-academy-21-top-masculina-img.jpg",
-      "Nome": "Caamisa top"
+      "Image": "https://imgcentauro-a.akamaihd.net/600x600/95847031/camiseta-nike-dry-academy-21-top-masculina-img.jpg"
     }
   ],
   "vendas": [
     {
+      "id": 1,
       "comprador": "Antonio Martins Cassiano",
       "qprod": 2,
+      "nome": "Camisa Luffy",
       "total": 55,
       "tamanho": "M",
       "situacao": "Pendente",
-      "marca": "Nike"
+      "descricao": "addsddfvsfs",
+      "marca": "Nike",
+      "image": "https://imgcentauro-a.akamaihd.net/600x600/95847031/camiseta-nike-dry-academy-21-top-masculina-img.jpg"
     },
     {
+      "id": 2,
       "comprador": "Antonio Martins Cassiano",
       "qprod": 1,
+      "camisa": "Nike azul",
       "total": 55,
       "tamanho": "P",
       "situacao": "Aprovada",
-      "marca": "Nike"
+      "descricao": "ejnrvejrvkwejfvkjfvkjdfs",
+      "marca": "Nike",
+      "image": "https://imgcentauro-a.akamaihd.net/600x600/95847031/camiseta-nike-dry-academy-21-top-masculina-img.jpg"
     }
   ],
   "comments": [

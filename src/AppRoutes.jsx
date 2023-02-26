@@ -48,7 +48,7 @@ const AppRoutes = () => {
                     <Route path="/edit-Produto/:id" element={<EditProduto />} />
 
                     <Route path='/vendas' element={<Vendas/>}/>
-                    <Route path='/vendaItem' element={<ItemVenda/>} />
+                    <Route path='/vendaItem/:id' element={<ItemVenda/>} />
                     <Route path="*" element={ <NotFoud />} />
                 </Routes>
             </AuthProvider>

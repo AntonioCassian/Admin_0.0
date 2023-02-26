@@ -53,7 +53,7 @@ export const FormAdd = ({onAdd}: Props) => {
                                 label="Q-Minima"
                                 id="qmin"
                                 htmlFor="qmin"
-                                onChange={newValue => setQuantidade(newValue)}    
+                                onChange={newValue => setQMinima(newValue)}    
                                 value={QMinima}
                             />
                             <LabelInput 

@@ -10,23 +10,24 @@ export const ItemProduto = () => {
     const navigate = useNavigate();
 
     const {id} = useParams()
-    const [tab, setTable] = useState<IProduto>()
-    console.log(id);
+    const [tab, setTable] = useState({
+        Nome: '', 
+        Image: '',
+        Descricao: '',
+        id: 0,
+    })
 
-    /**
-     * const edit = (id: number) => {
-        navigate(`/Edit-Produto/${id}`)
+    const edit = (id: number) => {
+        navigate(`/Edit-Produto/${id}`) 
     }
 
     const delet = (id: number) => {
         api.delete(`/produtos/${id}`)
-        alert('Removido, Atualize a Pagina!')
         navigate('/lista-produtos')
     }
-     */
 
     useEffect(() => {
-        api.get<IProduto>(`/produtos/${id}`)
+        api.get(`/produtos/${id}`)
         .then((response) => {
             console.log(response.data)
             setTable( response.data)
@@ -47,23 +48,20 @@ export const ItemProduto = () => {
                             <section className="d-flex justify-content-between mt-3">
                                 <Col xs={6}>
                                 <div className="" style={{}}>
-                                    <img className="w-100 h-50" src={"https://img.freepik.com/vetores-premium/maquete-de-t-shirt-masculina-de-vetor-amarelo_292608-200.jpg"} alt="" />
+                                    <img className="w-100 h-50" src={tab.Image} alt="" />
                                 </div>
                                 </Col>
                                 <Col xs={4}>
                                 <div className="text-center pt-4">
-                                    <h5>Camisa amarela</h5>
-                                    <p className="mt-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea nesciunt unde asperiores iure voluptas quod adipisci numquam, molestiae maiores, reprehenderit officia enim repudiandae rem. Molestiae reprehenderit eligendi rerum debitis aliquid.</p>
-                                    <div className="d-flex py-3">
-                                        <div className="d-flex justify-content-center w-100 flex-column mt-5">
-                                        <button  className="btn btn-primary mb-2 p-2" >
-                                            Editar
-                                        </button>
-                                        <button className="btn btn-danger  p-2">
-                                            Excluir
-                                        </button>
+                                    <h5>{tab.Nome}</h5>
+                                    <p className="mt-5">{tab.Descricao}</p>
+                                    <center>
+                                        <div className="d-flex flex-column py-3">
+                                            <button className="btn text-white mb-4" style={{background: '#4E6471'}} onClick={() => edit(tab.id)}>Editar</button>
+
+                                            <button className="btn btn-danger" onClick={() => delet(tab.id)}>Excluir</button>
                                         </div>
-                                    </div>
+                                    </center>
                                 </div>
                                 </Col>
                             </section>

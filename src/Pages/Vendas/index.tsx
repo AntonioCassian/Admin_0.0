@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { api, IListVendas } from '../../service/api';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Pesquisa } from '../../Components/layout/Pesquisa';
 import { Header } from '../../Components/layout/Header';
 import { Nav } from '../../Components/layout/Nav';
@@ -59,7 +59,7 @@ export function Vendas() {
                             <td className="border-b-black py-4 px-6">{data.marca}</td>
                             <td className="border-b-black py-4 px-6">{data.tamanho}</td>
                             <td className="border-b-black py-4 px-6">{data.situacao}</td>
-                            <td className="border-b-black py-4 px-6"><a href="#">Visualizar</a></td>
+                            <td className="border-b-black py-4 px-6"><Link to={{pathname: `/vendaItem/${data.id}`}}>Visualizar</Link></td>
                         </tr>
                         ))}
                     </tbody>

@@ -24,8 +24,7 @@ export function Produtos (){
 
     const delet = (id: number) => {
         api.delete(`/produtos/${id}`)
-        alert('Removido, Atualize a Pagina!')
-        navigate('/lista-produtos')
+        setTab(tab.filter(tab => tab.id !== id))
     }
     const edit = (id: number) => {
         navigate(`/Edit-Produto/${id}`)
@@ -73,12 +72,6 @@ export function Produtos (){
                             <td className="border-b-black py-4 px-6">{data.Valor}</td>
                             <td className="border-b-black py-4 px-6">{data.Marca}</td>
                             <td className="border-b-black py-4 px-6"><button onClick={() => view(data.id)}>Visualizar</button></td>
-                            <td className="border-b-black py-4 px-6">
-                                <button onClick={() => edit(data.id)}>Editar</button>
-                            </td>
-                            <td className="border-b-blackpy-4 px-6">
-                                <button onClick={() => delet(data.id)}>Excluir</button>
-                            </td>
                         </tr>
                         ))}        
                         
