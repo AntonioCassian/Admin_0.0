@@ -18,7 +18,15 @@ export interface IListVendas {
     total: number;
     marca: string;
     tamanho: string;
-    situacao: string;
+    situacao: boolean;
+    image: string
+}
+export interface IClientes {
+    id: number;
+    nome: string;
+    cpf: string;
+    email: number;
+    senha: string;
 }
 export type IProduto = {
     id: number;

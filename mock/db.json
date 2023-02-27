@@ -30,6 +30,16 @@
       "Nome": "Camiseta Nike Dri-FIT Academy Masculina",
       "Descricao": "Eleve o nível do seu treino diário com a camiseta Nike Dri-FIT Academy. O tecido macio e elástico remove o suor da pele, enquanto os painéis de tela mantêm o frescor para que você se concentre em dar o seu melhor no jogo.",
       "Image": "https://imgcentauro-a.akamaihd.net/600x600/95847031/camiseta-nike-dry-academy-21-top-masculina-img.jpg"
+    },
+    {
+      "Quantidade": "32",
+      "QMinima": "1",
+      "Valor": "222",
+      "Marca": "Camiseta",
+      "Nome": "Camisa Luffy",
+      "Descricao": "qerfytgyhujio",
+      "Image": {},
+      "id": 5
     }
   ],
   "vendas": [
@@ -56,6 +66,32 @@
       "descricao": "ejnrvejrvkwejfvkjfvkjdfs",
       "marca": "Nike",
       "image": "https://imgcentauro-a.akamaihd.net/600x600/95847031/camiseta-nike-dry-academy-21-top-masculina-img.jpg"
+    }
+  ],
+  "clientes": [
+    {
+      "id":1,
+      "nome": "Antonio Martins Cassiano",
+      "cpf": "123.123.123-43",
+      "email": "teste@teste.com",
+      "senha": "123432",
+      "cidade": ""
+    },
+    {
+      "id":2,
+      "nome": "Antonio Martins Cassiano",
+      "cfp": "123.123.123-43",
+      "email": "teste@teste.com",
+      "senha": "123432",
+      "cidade": ""
+    },
+    {
+      "id":3,
+      "nome": "Antonio Martins Cassiano",
+      "cfp": "123.123.123-43",
+      "email": "teste@teste.com",
+      "senha": "123432",
+      "cidade": ""
     }
   ],
   "comments": [

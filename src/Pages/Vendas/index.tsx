@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Pesquisa } from '../../Components/layout/Pesquisa';
 import { Header } from '../../Components/layout/Header';
 import { Nav } from '../../Components/layout/Nav';
-import { Col, Container, Row, Table } from "react-bootstrap";
+import { Badge, Col, Container, Row, Table } from "react-bootstrap";
 
 export function Vendas() {
     const navigate = useNavigate();
@@ -58,7 +58,11 @@ export function Vendas() {
                             <td className="border-b-black py-4 px-6">{data.total}</td>
                             <td className="border-b-black py-4 px-6">{data.marca}</td>
                             <td className="border-b-black py-4 px-6">{data.tamanho}</td>
-                            <td className="border-b-black py-4 px-6">{data.situacao}</td>
+                            <td className="border-b-black py-4 px-6">
+                                <Badge bg={data.situacao ?  "success" : "warning"}>
+                                {data.situacao ?  "Aprovado" : "Pendente"}
+                                </Badge>
+                                </td>
                             <td className="border-b-black py-4 px-6"><Link to={{pathname: `/vendaItem/${data.id}`}}>Visualizar</Link></td>
                         </tr>
                         ))}

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Badge } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { Header } from '../../../Components/layout/Header';
 import { api } from '../../../service/api';
 export function ItemVenda() {
     const [data, setData ] = useState({
-        image: '', descricao: '', nome: ''
+        image: '', descricao: '', nome: '', situacao: ''
     })
     const {id} = useParams();
     console.log(id);
@@ -44,13 +44,20 @@ export function ItemVenda() {
 
                             <div>
                             <p className='underline'>Situação:</p>
-                            <p>Compra Aprovada</p>
+                                <Badge bg={data.situacao ?  "success" : "warning"}>
+                                    {data.situacao ?  "Aprovado" : "Pendente"}
+                                </Badge>
                             </div>
                     </div>
                    <center>
-                     <button className='btn btn-danger mt-5'>
-                        Cancelar Compra
-                    </button>
+                     {data.situacao ? 
+                     <button className="btn btn-danger mt-5" disabled>
+                        Cancelar Venda
+                    </button>                : 
+                        <button className="btn btn-danger mt-5">
+                        Cancelar Venda
+                        </button>
+                    }
                    </center>
                 </Col>
             </Row>

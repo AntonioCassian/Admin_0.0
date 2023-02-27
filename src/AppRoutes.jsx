@@ -18,6 +18,8 @@ import { CadastroProduto } from './Pages/ProDutos/edição/CadastroProduto';
 import { EditProduto } from './Pages/ProDutos/edição/EditProduto';
 import { Vendas } from './Pages/Vendas';
 import { ItemVenda } from './Pages/Vendas/edição/ItemVenda';
+import { Clientes } from './Pages/Clientes';
+import { ViewCliente } from './Pages/Clientes/edição/Cliente';
 import { NotFoud } from './Pages/NotFound';
 import "./styles/global.css";
 
@@ -49,6 +51,9 @@ const AppRoutes = () => {
 
                     <Route path='/vendas' element={<Vendas/>}/>
                     <Route path='/vendaItem/:id' element={<ItemVenda/>} />
+
+                    <Route path='/clientes' element={<Clientes />}/>
+                    <Route path='/viewcliente/:id' element={<ViewCliente />}/>
                     <Route path="*" element={ <NotFoud />} />
                 </Routes>
             </AuthProvider>
