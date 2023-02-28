@@ -70,7 +70,7 @@
   ],
   "clientes": [
     {
-      "id":1,
+      "id": 1,
       "nome": "Antonio Martins Cassiano",
       "cpf": "123.123.123-43",
       "email": "teste@teste.com",
@@ -78,17 +78,9 @@
       "cidade": ""
     },
     {
-      "id":2,
+      "id": 2,
       "nome": "Antonio Martins Cassiano",
-      "cfp": "123.123.123-43",
-      "email": "teste@teste.com",
-      "senha": "123432",
-      "cidade": ""
-    },
-    {
-      "id":3,
-      "nome": "Antonio Martins Cassiano",
-      "cfp": "123.123.123-43",
+      "cpf": "123.123.123-43",
       "email": "teste@teste.com",
       "senha": "123432",
       "cidade": ""

@@ -1,22 +1,30 @@
 import React,{useEffect, useState}from "react";
 import { Container,Row, Col, Figure, Alert } from "react-bootstrap"
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { Header } from "../../../Components/layout/Header"
 import { api } from "../../../service/api";
+
 export const ViewCliente = () => {
+    const navigate = useNavigate();
     const [data, setData] = useState({
-        nome: '', cpf: '', cidade: '', bairro: '', uf: '', n: 0
+        nome: '', cpf: '', cidade: '', bairro: '', uf: '', n: 0, id: 0
     })
 
     const {id} = useParams();
-
+    const dele = (id: number) => {
+        api.delete(`/clientes/${id}`)
+        .then(response => {
+            setData(response.data);
+            navigate('/clientes')
+        })
+    }
     useEffect(() => {
-        api.get(`/cliente/${id}`)
+        api.get(`/clientes/${id}`)
         .then(response => {
             setData(response.data)
         })
         .catch(() => {
-            <Alert>('Erro ao Consultar BD!')</Alert>
+            alert('Erro ao Consultar BD!')
         });
     }, [id])
     return(
@@ -38,7 +46,7 @@ export const ViewCliente = () => {
                         <h5>{data.nome}</h5>
                         <div className="d-flex flex-column">
                             <span>
-                                <p><strong>Cpf:</strong> {data.cpf}</p>
+                                <strong>Cpf:</strong> {data.cpf}
                             </span>
                             <span>
                                 <strong>data de nascimento:</strong>23/04/2001
@@ -61,8 +69,8 @@ export const ViewCliente = () => {
                             </span>
                         </div>
                             <center>
-                                <button className="btn btn-danger mt-2" style={{width: '40%'}}>
-                                    Cancelar Inscrição
+                                <button className="btn btn-danger mt-3" style={{width: '40%'}} onClick={() => dele(data.id)}>
+                                    Cancelar Conta
                                 </button>
                             </center>
                         </center>

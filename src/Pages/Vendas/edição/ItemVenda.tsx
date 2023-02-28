@@ -1,14 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Badge } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Header } from '../../../Components/layout/Header';
 import { api } from '../../../service/api';
+
 export function ItemVenda() {
+    const navigate = useNavigate()
     const [data, setData ] = useState({
-        image: '', descricao: '', nome: '', situacao: ''
+        image: '', descricao: '', nome: '', situacao: '', id: 0
     })
     const {id} = useParams();
-    console.log(id);
+    const dele = (id: number) => {
+        api.delete(`/clientes/${id}`)
+        .then(response => {
+            setData(response.data);
+            navigate('/vendas')
+        })
+    }
 
     useEffect(() => {
         api.get(`/vendas/${id}`)
@@ -54,7 +62,7 @@ export function ItemVenda() {
                      <button className="btn btn-danger mt-5" disabled>
                         Cancelar Venda
                     </button>                : 
-                        <button className="btn btn-danger mt-5">
+                        <button className="btn btn-danger mt-5" onClick={() => dele(data.id)}>
                         Cancelar Venda
                         </button>
                     }
