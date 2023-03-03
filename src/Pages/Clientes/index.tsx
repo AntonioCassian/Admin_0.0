@@ -1,7 +1,6 @@
 import React, { useState , useEffect } from 'react';
 import { Container, Row, Col, Table } from "react-bootstrap"
 import { Header } from '../../Components/layout/Header';
-import { Pesquisa } from '../../Components/layout/Pesquisa';
 import { Nav } from '../../Components/layout/Nav';
 import { api, IClientes } from '../../service/api';
 import { useNavigate } from 'react-router-dom';
@@ -38,9 +37,7 @@ export const Clientes = () => {
                                 <div className="text-center">
                                     <div className="">
                                         <h4>Clientes</h4>
-                                        <div>
-                                        <Pesquisa />
-                                        </div>  
+                                       
                                     </div>      
                                 </div>
                                 <div>

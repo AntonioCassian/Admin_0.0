@@ -2,16 +2,22 @@ import React, { useEffect, useState } from "react";
 import { Header } from "../../Components/layout/Header";
 import { Nav } from "../../Components/layout/Nav";
 import { Link, redirect, useNavigate } from "react-router-dom";
-import { Pesquisa } from "../../Components/layout/Pesquisa";
 import { Button } from "../../Components/Button";
 import { api, ListProdutos } from "../../service/api";
 import { Col, Container, Row, Table } from "react-bootstrap";
-
+import axios from "axios";
+/**
+ * 
+ *  const search =(data: any) => {
+    return data.filter((item: { Marca: string; })=> 
+    item.Marca.toLowerCase().includes(busca));
+}
+ */
 
 export function Produtos (){
     const navigate = useNavigate();
     const [tab, setTab] = useState<ListProdutos[]>([]);
-    console.log(tab);
+    
     useEffect(() => {
        api.get('/produtos')
        .then((result) => {
@@ -22,17 +28,11 @@ export function Produtos (){
        });
     }, []);
 
-    const delet = (id: number) => {
-        api.delete(`/produtos/${id}`)
-        setTab(tab.filter(tab => tab.id !== id))
-    }
-    const edit = (id: number) => {
-        navigate(`/Edit-Produto/${id}`)
-    }
+    
     const view = (id: number) => {
         navigate(`/item-Produto/${id}`)
     }
-
+    
     return(
         <>
         <Header/>     
@@ -47,7 +47,7 @@ export function Produtos (){
                     <div className="">
                         <h4>Lista de Produtos</h4>
                     <div>
-                    <Pesquisa />
+                         
                     </div>
                     <Button to="/cadastro-Produto" text="Criar Produto" className="btn btn-secondary"/>  
                         

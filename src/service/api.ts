@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export interface ListProdutos {
+export type ListProdutos = {
     id: number;
     Quantidade: string;
     QMinima: string;

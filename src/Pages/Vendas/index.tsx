@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { api, IListVendas } from '../../service/api';
 import { Link, useNavigate } from 'react-router-dom';
-import { Pesquisa } from '../../Components/layout/Pesquisa';
 import { Header } from '../../Components/layout/Header';
 import { Nav } from '../../Components/layout/Nav';
 import { Badge, Col, Container, Row, Table } from "react-bootstrap";
@@ -32,9 +31,7 @@ export function Vendas() {
                 <div className="text-center">
                     <div className="">
                         <h4>Vendas</h4>
-                        <div>
-                        <Pesquisa />
-                        </div>  
+                        
                     </div>      
                 </div>
                 <div>

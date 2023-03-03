@@ -42,18 +42,19 @@ const AppRoutes = () => {
             <AuthProvider>
                 <Routes>
                     <Route exact path="/login" element={<Login /> } />
-                    <Route path="/" element={<Private> <Home /> </Private>} />
-                    <Route path="/lista-produtos" element={<Private> <Produtos /> </Private>} />
+                    <Route path="/" element={ <Private><Home /></Private> } />
+                    <Route path="/lista-produtos" element={ <Private><Produtos /></Private> } />
 
-                    <Route path='/cadastro-Produto' element={<CadastroProduto />}/>
-                    <Route path='/item-Produto/:id' element={<ItemProduto />}/>
-                    <Route path="/edit-Produto/:id" element={<EditProduto />} />
+                    <Route path='/cadastro-Produto' element={<Private><CadastroProduto /> </Private>}/>
+                    <Route path='/item-Produto/:id' element={<Private><ItemProduto /></Private>}/>
+                    <Route path="/edit-Produto/:id" element={<Private><EditProduto /></Private>} />
 
-                    <Route path='/vendas' element={<Vendas/>}/>
-                    <Route path='/vendaItem/:id' element={<ItemVenda/>} />
+                    <Route path='/vendas' element={<Private><Vendas/></Private>}/>
+                    <Route path='/vendaItem/:id' element={<Private><ItemVenda/></Private>} />
 
-                    <Route path='/clientes' element={<Clientes />}/>
-                    <Route path='/viewcliente/:id' element={<ViewCliente />}/>
+                    <Route path='/clientes' element={<Private><Clientes /></Private>}/>
+                    <Route path='/viewcliente/:id' element={<Private><ViewCliente /> </Private>}/>
+
                     <Route path="*" element={ <NotFoud />} />
                 </Routes>
             </AuthProvider>
