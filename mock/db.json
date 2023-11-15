@@ -30,6 +30,26 @@
       "Descricao": "qerfytgyhujio",
       "Image": {},
       "id": 5
+    },
+    {
+      "Quantidade": "32",
+      "QMinima": "10",
+      "Valor": "50.00",
+      "Marca": "Camiseta",
+      "Nome": "Camisa Luffy",
+      "Descricao": "Camiseta de qualidade...",
+      "Image": "C:\\fakepath\\image.png",
+      "id": 6
+    },
+    {
+      "Quantidade": "15",
+      "QMinima": "2",
+      "Valor": "10.00",
+      "Marca": "Polo",
+      "Nome": "smdgfmlfdmgdfg",
+      "Descricao": "aaaaaaa",
+      "Image": "C:\\fakepath\\image.png",
+      "id": 7
     }
   ],
   "vendas": [
