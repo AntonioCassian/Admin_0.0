@@ -4,6 +4,10 @@ onde o administrador pode cadastrar produtos, editar e excluir,
 ver a situação das compras que foram feitas, ver os clientes que foram cadastrados, isso com authenticação de um usuário, futuramente vai ter um controle das contas, onde vai ter um calendário contendo as compras.
 Tecnologias: React, Type Script, Json Serve.
 
+### Para fazer o login é:
+  usuario: antonio
+  senha: 1234567
+
 ## Designer do projeto no figma:
 https://www.figma.com/file/YuGTJzmIVqg2U96qWeBmEW/LOJA?node-id=0%3A1&t=xsfrb7JAoYCk1YXF-1
 
